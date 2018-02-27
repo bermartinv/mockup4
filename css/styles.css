@@ -1,0 +1,124 @@
+html {
+    box-sizing: border-box
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+p {
+  margin: 0 0 1em;
+}
+.container {
+  width: 100%;
+  height:100vh;
+  margin: 0 auto;
+  display:flex;
+  flex-direction:row;
+}
+
+.picture, .resume {
+  width: 50%;
+  height: 100%;
+}
+
+.picture{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+
+.intro {
+  font-family: Montserrat, sans-serif;
+  font-size: 10px;
+  line-height: 1.35;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+}
+
+.background {
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: -1;
+  width: 50%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/profile.jpg");
+  background-size: cover;
+  background-position: center top;
+  filter: brightness(90%);
+}
+.intro em {
+  color: #3ee6bf;
+  font-style: normal;
+  position: relative;
+  font-weight: 700;
+}
+
+.resume {
+  background-color: #fff;
+  font-family: Hind, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.818;
+  overflow-y: scroll;
+  padding-left:10px;
+}
+
+.part {
+  width: 100%;
+  margin-top: 3em;
+  //clear: both;
+  overflow: hidden;
+}
+
+section.part:nth-of-type(1){
+  margin-top: 10px;
+}
+.part:first-child {
+  margin-top: 0;
+}
+
+.sidebar {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 100%;
+  font-size: 16px;
+}
+
+.tag {
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 600;
+  color: rgb(43, 93, 240);
+}
+
+
+@media screen and (min-width: 700px) and (max-width:1000px){
+  .part{
+    display:flex;
+    flex-direction: row;
+  }
+  .sidebar{
+    margin-right: 20px;
+    align-self: flex-start;
+  }
+}
+
+@media screen and (max-width: 699px){
+  .picture{
+    display:none;
+  }
+  .resume{
+    width: 100%;
+  }
+}
