@@ -73,8 +73,9 @@ p {
 .part {
   width: 100%;
   margin-top: 3em;
-  //clear: both;
   overflow: hidden;
+  display:flex;
+  flex-direction: row;
 }
 
 section.part:nth-of-type(1){
@@ -85,9 +86,11 @@ section.part:nth-of-type(1){
 }
 
 .sidebar {
+  width:30%;
   display:flex;
   justify-content: center;
   align-items: center;
+  align-self: flex-start;
 }
 
 .main {
@@ -106,11 +109,16 @@ section.part:nth-of-type(1){
 @media screen and (min-width: 700px) and (max-width:1000px){
   .part{
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content:center;
+
   }
   .sidebar{
+    width: 100%;
     margin-right: 20px;
-    align-self: flex-start;
+    justify-content: center;
+    align-items: center;
+    
   }
 }
 
@@ -120,5 +128,14 @@ section.part:nth-of-type(1){
   }
   .resume{
     width: 100%;
+  }
+  .part{
+    flex-direction: column;
+  }
+  .sidebar{
+    width:100%;
+    margin-right: 20px;
+    justify-content: center;
+    align-items: center; 
   }
 }
